@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ping-service
+  labels:
+    app: ping-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ping-service
+  template:
+    metadata:
+      labels:
+        app: ping-service
+    spec:
+      containers:
+      - name: app
+        image: bluemill/ping-service
+        env:
+          - name: PING_URLS
+            value: https://google.com
