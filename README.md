@@ -9,3 +9,7 @@ You can apply the `ping-service.yaml` file directly to have it ping `https://goo
 kubectl apply -f ./ping-service.yaml
 kubectl logs -f [name]
 ```
+
+## Walkthrough
+
+Watch how this service was built at https://kyleferg.com/building-a-golang-ping-service
