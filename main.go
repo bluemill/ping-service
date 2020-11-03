@@ -29,7 +29,7 @@ func pingURL(url string) {
 		_, err := http.Get(url)
 		log.Println("Pinging " + url)
 		if err != nil {
-			log.Println("There was an error pinging " + url)
+			log.Println("There was an error pinging " + url + ": " + err.Error())
 		}
 
 		time.Sleep(5 * time.Second)
